@@ -32,6 +32,7 @@ class ProductViewBody extends StatelessWidget {
               ),
             ),
           ),
+          
         ],
       ),
     );
