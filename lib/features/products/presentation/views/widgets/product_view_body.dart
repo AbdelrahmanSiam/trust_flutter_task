@@ -9,7 +9,7 @@ class ProductViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 22.0,horizontal: 15),
+      padding: const EdgeInsets.symmetric(vertical: 28.0,horizontal: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
@@ -24,6 +24,7 @@ class ProductViewBody extends StatelessWidget {
           ),
           SizedBox(height: 20,),
           Text("عروض دوشكا برجر" , style: AppStyles.textStyles22,),
+
         ],
       ),
     );
