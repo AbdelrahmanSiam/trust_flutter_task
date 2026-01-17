@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:trust_flutter_task/core/utils/app_styles.dart';
 import 'package:trust_flutter_task/features/cart/presentation/views/widgets/custom_back_button.dart';
 
-class CustomCardAppBar extends StatelessWidget {
-  const CustomCardAppBar({super.key});
+class CustomProductDetailsAppBar extends StatelessWidget {
+  const CustomProductDetailsAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,10 +11,11 @@ class CustomCardAppBar extends StatelessWidget {
       textDirection: TextDirection.rtl,
       children: [
         CustomBackButton(),
-        Spacer(),
-        Text("تفاصيل المنتج", style: AppStyles.textStyles22),
-        Spacer(),
-        IconButton(onPressed: (){}, icon: Icon(Icons.shopping_cart , color: Colors.red,size: 34,)),
+        SizedBox(width: 50,),
+        Text("عربه التسوق", 
+        style: AppStyles.textStyles22,
+        textAlign: TextAlign.center,
+        ),
       ],
     );
   }
