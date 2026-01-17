@@ -39,12 +39,6 @@ class _ProductsViewState extends State<ProductsView> {
     }
   }
 
-  void onCartTap() {
-    if (cartCount == 0) return;
-
-    context.push(AppRouter.kProductDetailsView);
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +47,6 @@ class _ProductsViewState extends State<ProductsView> {
         selectedIndex: selectedIndex,
         onItemTapped: onItemTapped,
         cartCount: cartCount,
-        onCartTap: onCartTap,
       ),
     );
   }

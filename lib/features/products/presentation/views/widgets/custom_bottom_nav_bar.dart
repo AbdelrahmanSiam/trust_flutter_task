@@ -6,13 +6,12 @@ class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({
     super.key,
     required this.selectedIndex,
-    required this.onItemTapped, required this.cartCount, required this.onCartTap,
+    required this.onItemTapped, required this.cartCount,
   });
 
   final int selectedIndex;
   final Function(int) onItemTapped;
   final int cartCount;
-  final VoidCallback onCartTap;
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +43,7 @@ class CustomBottomNavBar extends StatelessWidget {
             isSelected: selectedIndex == 1,
             onTap: () => onItemTapped(1),
           ),
-          CartIcon(cartCount: cartCount, onTap: onCartTap),
+          CartIcon(cartCount: cartCount,hasBackground: true,),
           NavBarItem(
             icon: Icons.local_offer,
             label: "العروض",

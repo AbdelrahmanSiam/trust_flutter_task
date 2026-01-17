@@ -1,28 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:trust_flutter_task/core/network/app_router.dart';
 
 class CartIcon extends StatelessWidget {
   final int cartCount;
-  final VoidCallback onTap;
+  final bool hasBackground;
 
   const CartIcon({
     super.key,
     required this.cartCount,
-    required this.onTap,
+    this.hasBackground = true,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: cartCount == 0 ? null : onTap,
+      onTap: (){
+        context.push(AppRouter.kProductDetailsView);
+      },
       child: Stack(
         clipBehavior: Clip.none,
+        alignment: Alignment.center,
         children: [
           Container(
-            padding: const EdgeInsets.all(12),
-            decoration: const BoxDecoration(
-              color: Color(0XFF411E0F),
-              shape: BoxShape.circle,
-            ),
+            padding: hasBackground ? const EdgeInsets.all(12) : EdgeInsets.zero,
+            decoration: hasBackground
+                ? const BoxDecoration(
+                    color: Color(0XFF411E0F),
+                    shape: BoxShape.circle,
+                  )
+                : null,
             child: const Icon(
               Icons.shopping_cart,
               color: Colors.white,
@@ -32,10 +39,12 @@ class CartIcon extends StatelessWidget {
 
           if (cartCount > 0)
             Positioned(
-              top: -4,
-              left: -4,
+              top: -2,
+              right: -2,
               child: Container(
-                padding: const EdgeInsets.all(5),
+                width: 18,
+                height: 18,
+                alignment: Alignment.center,
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   shape: BoxShape.circle,
