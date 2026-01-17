@@ -18,7 +18,7 @@ class CustomBackButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(30),
             border: Border.all(
               color: Colors.black, 
-              width: 0.5,
+              width: 0.7,
             ),
           ),
           child: Padding(

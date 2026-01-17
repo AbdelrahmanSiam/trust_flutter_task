@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trust_flutter_task/core/utils/app_styles.dart';
 
 class CustomSandwichList extends StatefulWidget {
   final String title;
@@ -34,10 +35,7 @@ class _CustomSandwichListState extends State<CustomSandwichList> {
           children: [
             Text(
               widget.title,
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
+              style: AppStyles.textStyles18,
             ),
             SizedBox(width: 5,),
             Text("*" , style: TextStyle(color: Colors.red , fontSize: 20),)
@@ -68,7 +66,7 @@ class _CustomSandwichListState extends State<CustomSandwichList> {
                     child: Text(
                       options[index],
                       textAlign: TextAlign.right,
-                      style: const TextStyle(fontSize: 16),
+                      style: AppStyles.textStyles16,
                     ),
                   ),
 
