@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:trust_flutter_task/core/utils/app_styles.dart';
 import 'package:trust_flutter_task/core/utils/assets_data.dart';
-import 'package:trust_flutter_task/features/cart/presentation/views/widgets/custom_card_app_bar.dart';
+import 'package:trust_flutter_task/features/card/presentation/views/widgets/custom_card_app_bar.dart';
 import 'package:trust_flutter_task/core/widgets/custom_divider.dart';
-import 'package:trust_flutter_task/features/cart/presentation/views/widgets/custom_quantity_button.dart';
-import 'package:trust_flutter_task/features/cart/presentation/views/widgets/custom_quantity_selector.dart';
-import 'package:trust_flutter_task/features/cart/presentation/views/widgets/custom_sandwich_list.dart';
-import 'package:trust_flutter_task/features/cart/presentation/views/widgets/large_text.dart';
+import 'package:trust_flutter_task/features/card/presentation/views/widgets/custom_quantity_button.dart';
+import 'package:trust_flutter_task/features/card/presentation/views/widgets/custom_quantity_selector.dart';
+import 'package:trust_flutter_task/features/card/presentation/views/widgets/custom_sandwich_list.dart';
+import 'package:trust_flutter_task/features/card/presentation/views/widgets/large_text.dart';
 
 class CartViewBody extends StatefulWidget {
   const CartViewBody({super.key});

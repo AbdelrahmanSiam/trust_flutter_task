@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trust_flutter_task/core/widgets/custom_button.dart';
-import 'package:trust_flutter_task/features/cart/presentation/views/widgets/cart_view_body.dart';
+import 'package:trust_flutter_task/features/card/presentation/views/widgets/cart_view_body.dart';
 
 class CartView extends StatelessWidget {
   const CartView({super.key});
