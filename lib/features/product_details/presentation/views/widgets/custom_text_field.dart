@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:trust_flutter_task/core/utils/app_styles.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
@@ -11,6 +12,7 @@ final String hintText;
     return TextField(
       textAlign: TextAlign.right,
       decoration: InputDecoration(
+        hintStyle: AppStyles.textStyles16,
         hintText: hintText,
         filled: true,
         fillColor: Colors.white,

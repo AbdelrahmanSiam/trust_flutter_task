@@ -13,7 +13,8 @@ class CobonSection extends StatelessWidget {
       textDirection: TextDirection.rtl,
       children: [
         Expanded(
-          child: CustomTextField(hintText: "ادخل الكوبون هنا"),
+          child: CustomTextField(
+            hintText: "ادخل الكوبون هنا"),
         ),
         const SizedBox(width: 10),
         AddButton(
