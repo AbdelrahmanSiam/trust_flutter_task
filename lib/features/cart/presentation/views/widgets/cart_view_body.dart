@@ -4,6 +4,7 @@ import 'package:trust_flutter_task/core/utils/assets_data.dart';
 import 'package:trust_flutter_task/features/cart/presentation/views/widgets/custom_card_app_bar.dart';
 import 'package:trust_flutter_task/features/cart/presentation/views/widgets/custom_divider.dart';
 import 'package:trust_flutter_task/features/cart/presentation/views/widgets/custom_quantity_button.dart';
+import 'package:trust_flutter_task/features/cart/presentation/views/widgets/custom_sandwich_list.dart';
 import 'package:trust_flutter_task/features/cart/presentation/views/widgets/large_text.dart';
 
 class CartViewBody extends StatefulWidget {
@@ -23,82 +24,100 @@ class _CartViewBodyState extends State<CartViewBody> {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           CustomCardAppBar(),
-          SizedBox(
-            height: 10,
-          ),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(8),
-            child: Image.asset(
-              AssetsData.burgur,
-              height: 320,
-              width: double.infinity,
-              fit: BoxFit.cover,
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            "بيج بايت بوكس",
-            style: AppStyles.textStyles18,
-          ),
-          SizedBox(height: 20),
-          Row(
-            textDirection: TextDirection.rtl,
-            children: [
-              Text("ج.م 249", style: AppStyles.textStyles16),
-              Spacer(),
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
-                  borderRadius: BorderRadius.circular(25),
-                  border: Border.all(color: Colors.grey.shade300),
-                ),
-                child: Row(
-                  children: [
-                    CustomQuantityButton(
-                      backgroundColor: Colors.red,
-                      icon: Icons.add,
-                      onPressed: () {
-                        setState(
-                          () {
-                            quantity++;
-                          },
-                        );
-                      },
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 10,
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: Image.asset(
+                      AssetsData.burgur,
+                      height: 320,
+                      width: double.infinity,
+                      fit: BoxFit.cover,
                     ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
-                      child: Text(
-                        quantity.toString(),
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    "بيج بايت بوكس",
+                    style: AppStyles.textStyles18,
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    textDirection: TextDirection.rtl,
+                    children: [
+                      Text("ج.م 249", style: AppStyles.textStyles16),
+                      Spacer(),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.grey.shade200,
+                          borderRadius: BorderRadius.circular(25),
+                          border: Border.all(color: Colors.grey.shade300),
+                        ),
+                        child: Row(
+                          children: [
+                            CustomQuantityButton(
+                              backgroundColor: Colors.red,
+                              icon: Icons.add,
+                              onPressed: () {
+                                setState(
+                                  () {
+                                    quantity++;
+                                  },
+                                );
+                              },
+                            ),
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 16),
+                              child: Text(
+                                quantity.toString(),
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                            CustomQuantityButton(
+                              backgroundColor: Colors.grey.shade400,
+                              icon: Icons.remove,
+                              onPressed: () {
+                                if (quantity > 1) {
+                                  setState(() {
+                                    quantity--;
+                                  });
+                                }
+                              },
+                            ),
+                          ],
                         ),
                       ),
-                    ),
-                    CustomQuantityButton(
-                      backgroundColor: Colors.grey.shade400,
-                      icon: Icons.remove,
-                      onPressed: () {
-                        if (quantity > 1) {
-                          setState(() {
-                            quantity--;
-                          });
-                        }
-                      },
-                    ),
-                  ],
-                ),
+                    ],
+                  ),
+                  SizedBox(height: 15,),
+                  CustomDivider(color: Colors.grey.shade400,thickness: 5,),
+                  SizedBox(height: 15,),
+                  LargeText(text: "3 ساندوتشات سلايدر من اختيارك (ترافيل - أوجي - سبايس - رانشي - بيكون)"),
+                  SizedBox(height: 15,),
+                  CustomDivider(color: Colors.grey.shade400,thickness: 5,),
+                  SizedBox(height: 15,),
+                  CustomSandwichList(title: "السندوتش الاول"),
+                  SizedBox(height: 15,),
+                  CustomDivider(color: Colors.grey.shade400,thickness: 5,),
+                  SizedBox(height: 15,),
+                  CustomSandwichList(title: "السندوتش الثانى"),
+                  SizedBox(height: 15,),
+                  CustomDivider(color: Colors.grey.shade400,thickness: 5,),
+                  SizedBox(height: 15,),
+                  CustomSandwichList(title: "السندوتش الثالث"),
+                ],
               ),
-            ],
+            ),
           ),
-          SizedBox(height: 15,),
-          CustomDivider(color: Colors.grey.shade400,thickness: 5,),
-          SizedBox(height: 15,),
-          LargeText(text: "3 ساندوتشات سلايدر من اختيارك (ترافيل - أو جي - سبايس - رانشي - بيكون)"),
-          SizedBox(height: 15,),
-          CustomDivider(color: Colors.grey.shade400,thickness: 5,),
         ],
       ),
     );
