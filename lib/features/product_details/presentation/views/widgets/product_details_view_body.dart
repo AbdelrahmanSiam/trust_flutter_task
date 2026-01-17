@@ -6,6 +6,7 @@ import 'package:trust_flutter_task/features/product_details/presentation/views/w
 import 'package:trust_flutter_task/features/product_details/presentation/views/widgets/cobon_section.dart';
 import 'package:trust_flutter_task/features/product_details/presentation/views/widgets/custom_text_field.dart';
 import 'package:trust_flutter_task/features/product_details/presentation/views/widgets/dash_divider.dart';
+import 'package:trust_flutter_task/features/product_details/presentation/views/widgets/payment_section.dart';
 import 'package:trust_flutter_task/features/product_details/presentation/views/widgets/product_details_app_bar.dart';
 import 'package:trust_flutter_task/features/product_details/presentation/views/widgets/product_details_card.dart';
 import 'package:trust_flutter_task/features/product_details/presentation/views/widgets/view_first_section.dart';
@@ -30,11 +31,10 @@ class ProductDetailsViewBody extends StatelessWidget {
           const SizedBox(height: 25,),
           const CustomDivider(),
           const SizedBox(height: 25,),
-          const Text("تفاصيل الدفع" , style: AppStyles.textStyles22,),
-          const SizedBox(height: 20,),
-          const DashedDivider(),
+          PaymentSection(),
         ],
       ),
+      
     );
   }
 }
