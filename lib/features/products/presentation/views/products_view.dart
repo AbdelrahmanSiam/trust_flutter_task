@@ -1,42 +1,59 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:trust_flutter_task/core/network/app_router.dart';
 import 'package:trust_flutter_task/features/product_details/presentation/views/product_details_view.dart';
-import 'package:trust_flutter_task/features/product_details/presentation/views/widgets/product_details_view_body.dart';
 import 'package:trust_flutter_task/features/products/presentation/views/widgets/custom_bottom_nav_bar.dart';
 import 'package:trust_flutter_task/features/products/presentation/views/widgets/product_view_body.dart';
 
 class ProductsView extends StatefulWidget {
-  const ProductsView({super.key});
+  final Widget child;
+
+  const ProductsView({super.key, required this.child});
 
   @override
   State<ProductsView> createState() => _ProductsViewState();
 }
 
 class _ProductsViewState extends State<ProductsView> {
-    int selectedIndex = 0;
-
-    final List<Widget> pages = const [
-    Center(child: Text("الرئيسية")),  
-    ProductViewBody(),      
-    ProductDetailsView(),
-    Center(child: Text("العروض")),
-    Center(child: Text("الحساب")),
-  ];
+  int selectedIndex = 0;
+  int cartCount = 1;
 
   void onItemTapped(int index) {
     setState(() {
       selectedIndex = index;
     });
+
+    switch (index) {
+      case 0:
+        context.go(AppRouter.kProductsView);
+        break;
+      case 1:
+        context.go('/menu');
+        break;
+      case 3:
+        context.go('/offers');
+        break;
+      case 4:
+        context.go('/profile');
+        break;
+    }
   }
+
+  void onCartTap() {
+    if (cartCount == 0) return;
+
+    context.push(AppRouter.kProductDetailsView);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: IndexedStack(
-        index: selectedIndex,
-        children: pages,
-      ),
+      body: widget.child,
       bottomNavigationBar: CustomBottomNavBar(
         selectedIndex: selectedIndex,
         onItemTapped: onItemTapped,
+        cartCount: cartCount,
+        onCartTap: onCartTap,
       ),
     );
   }

@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:trust_flutter_task/core/widgets/cart_icon.dart';
 import 'package:trust_flutter_task/features/products/presentation/views/widgets/nav_bar_item.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({
     super.key,
     required this.selectedIndex,
-    required this.onItemTapped,
+    required this.onItemTapped, required this.cartCount, required this.onCartTap,
   });
 
   final int selectedIndex;
   final Function(int) onItemTapped;
+  final int cartCount;
+  final VoidCallback onCartTap;
 
   @override
   Widget build(BuildContext context) {
@@ -41,12 +44,7 @@ class CustomBottomNavBar extends StatelessWidget {
             isSelected: selectedIndex == 1,
             onTap: () => onItemTapped(1),
           ),
-          NavBarItem(
-            icon: Icons.shopping_cart,
-            isSelected: selectedIndex == 2,
-            isMiddle: true,
-            onTap: () => onItemTapped(2),
-          ),
+          CartIcon(cartCount: cartCount, onTap: onCartTap),
           NavBarItem(
             icon: Icons.local_offer,
             label: "العروض",

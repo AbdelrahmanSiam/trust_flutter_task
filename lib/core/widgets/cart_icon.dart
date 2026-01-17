@@ -33,17 +33,17 @@ class CartIcon extends StatelessWidget {
           if (cartCount > 0)
             Positioned(
               top: -4,
-              right: -4,
+              left: -4,
               child: Container(
                 padding: const EdgeInsets.all(5),
                 decoration: const BoxDecoration(
-                  color: Colors.red,
+                  color: Colors.white,
                   shape: BoxShape.circle,
                 ),
                 child: Text(
                   cartCount.toString(),
                   style: const TextStyle(
-                    color: Colors.white,
+                    color: Color(0XFF411E0F),
                     fontSize: 10,
                     fontWeight: FontWeight.bold,
                   ),
