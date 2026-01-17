@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trust_flutter_task/core/utils/app_styles.dart';
 import 'package:trust_flutter_task/features/cart/presentation/views/widgets/cart_view_body.dart';
 
 class CartView extends StatelessWidget {

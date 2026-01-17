@@ -10,7 +10,7 @@ class ProductsView extends StatefulWidget {
 }
 
 class _ProductsViewState extends State<ProductsView> {
-    int selectedIndex = 2;
+    int selectedIndex = 1;
 
     final List<Widget> pages = const [
     Center(child: Text("الرئيسية")),        

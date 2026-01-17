@@ -42,7 +42,7 @@ class CustomBottomNavBar extends StatelessWidget {
             onTap: () => onItemTapped(1),
           ),
           NavBarItem(
-            icon: Icons.shopping_basket,
+            icon: Icons.shopping_cart,
             isSelected: selectedIndex == 2,
             isMiddle: true,
             onTap: () => onItemTapped(2),
