@@ -14,8 +14,14 @@ class ProductCard extends StatelessWidget {
         textDirection: TextDirection.rtl,
         children: [
           ClipRRect(
-           borderRadius: BorderRadius.circular(15),
-           child: Image.asset(image,height: 90,width: 80,fit: BoxFit.cover,),),
+          borderRadius: BorderRadius.circular(15),
+          child: Image.asset(
+            image,
+            fit: BoxFit.cover,
+                cacheWidth: 80,
+                cacheHeight: 80,
+          ),
+        ),
            SizedBox(width: 12,),
            Expanded(
              child: Column(

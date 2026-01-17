@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trust_flutter_task/core/widgets/custom_button.dart';
 import 'package:trust_flutter_task/features/product_details/presentation/views/widgets/product_details_view_body.dart';
 
 class ProductDetailsView extends StatelessWidget {
@@ -8,6 +9,7 @@ class ProductDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ProductDetailsViewBody(),
+      bottomNavigationBar: CustomButton(text: "المتابعة للدفع",),
     );
   }
 }

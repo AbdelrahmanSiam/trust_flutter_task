@@ -4,15 +4,13 @@ import 'package:trust_flutter_task/core/utils/app_styles.dart';
 
 class CustomBackButton extends StatelessWidget {
   const CustomBackButton({
-    super.key,
+    super.key,required this.onTap,
   });
-
+  final void Function() onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-        Navigator.pop(context);
-      },
+      onTap: onTap,
       child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),

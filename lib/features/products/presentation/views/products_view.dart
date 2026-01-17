@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trust_flutter_task/features/product_details/presentation/views/product_details_view.dart';
 import 'package:trust_flutter_task/features/product_details/presentation/views/widgets/product_details_view_body.dart';
 import 'package:trust_flutter_task/features/products/presentation/views/widgets/custom_bottom_nav_bar.dart';
 import 'package:trust_flutter_task/features/products/presentation/views/widgets/product_view_body.dart';
@@ -16,7 +17,7 @@ class _ProductsViewState extends State<ProductsView> {
     final List<Widget> pages = const [
     Center(child: Text("الرئيسية")),  
     ProductViewBody(),      
-    ProductDetailsViewBody(),
+    ProductDetailsView(),
     Center(child: Text("العروض")),
     Center(child: Text("الحساب")),
   ];

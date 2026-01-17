@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:trust_flutter_task/core/utils/app_styles.dart';
-import 'package:trust_flutter_task/features/cart/presentation/views/widgets/custom_back_button.dart';
+import 'package:trust_flutter_task/core/widgets/custom_back_button.dart';
 
 class CustomCardAppBar extends StatelessWidget {
   const CustomCardAppBar({super.key});
@@ -10,7 +11,9 @@ class CustomCardAppBar extends StatelessWidget {
     return Row(
       textDirection: TextDirection.rtl,
       children: [
-        CustomBackButton(),
+        CustomBackButton(
+          onTap: (){(context).pop();},
+        ),
         Spacer(),
         Text("تفاصيل المنتج", style: AppStyles.textStyles22),
         Spacer(),

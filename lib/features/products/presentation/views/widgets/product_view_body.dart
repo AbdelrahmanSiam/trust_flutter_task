@@ -8,7 +8,7 @@ class ProductViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 28.0, horizontal: 15),
+      padding: const EdgeInsets.only(top: 28.0, left: 15,right: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
