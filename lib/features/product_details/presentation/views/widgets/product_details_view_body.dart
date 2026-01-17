@@ -18,21 +18,23 @@ class ProductDetailsViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(right: 16, left: 16, top: 38),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          const CustomProductDetailsAppBar(),
-          const SizedBox(height: 30),
-          ViewFirstScection(),
-          const SizedBox(height: 5,),
-          const CustomDivider(),
-          const SizedBox(height: 25,),
-          CobonSection(),
-          const SizedBox(height: 25,),
-          const CustomDivider(),
-          const SizedBox(height: 25,),
-          PaymentSection(),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            const CustomProductDetailsAppBar(),
+            const SizedBox(height: 30),
+            ViewFirstScection(),
+            const SizedBox(height: 5,),
+            const CustomDivider(),
+            const SizedBox(height: 25,),
+            CobonSection(),
+            const SizedBox(height: 25,),
+            const CustomDivider(),
+            const SizedBox(height: 25,),
+            PaymentSection(),
+          ],
+        ),
       ),
       
     );

@@ -9,7 +9,7 @@ class ProductDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ProductDetailsViewBody(),
-      bottomNavigationBar: CustomButton(text: "المتابعة للدفع",),
+      bottomNavigationBar: CustomButton(text: "المتابعة للدفع",isSelected: true,),
     );
   }
 }

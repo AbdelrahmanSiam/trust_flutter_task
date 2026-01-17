@@ -12,7 +12,7 @@ class HorizontalListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       scrollDirection: Axis.horizontal,
-      itemCount: 10,
+      itemCount: 3,
       itemBuilder: (context , index){
       return HorizontalListViewItem(title: "عروض دوشكا برجر",image: AssetsData.burgur,);
     },);
