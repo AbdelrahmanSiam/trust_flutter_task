@@ -27,7 +27,7 @@ class ProductViewBody extends StatelessWidget {
                     style: AppStyles.textStyles22,
                   ),
                   SizedBox(height: 20),
-                  ProductCardListView(), // محتوى الكروت
+                  ProductCardListView(), 
                 ],
               ),
             ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trust_flutter_task/features/products/presentation/views/products_view.dart';
+import 'package:trust_flutter_task/core/network/app_router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,13 +10,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.light,
         scaffoldBackgroundColor: Color(0XFFFAF0E6),
       ),
-      home: ProductsView(),
     );
   }
 }

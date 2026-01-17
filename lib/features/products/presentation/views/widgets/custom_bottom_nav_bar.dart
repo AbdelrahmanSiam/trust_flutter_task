@@ -30,19 +30,19 @@ class CustomBottomNavBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           NavBarItem(
-            icon: Icons.home,
+            icon: Icons.house_outlined,
             label: "الرئيسية",
             isSelected: selectedIndex == 0,
             onTap: () => onItemTapped(0),
           ),
           NavBarItem(
-            icon: Icons.list_alt,
+            icon: Icons.list_alt_outlined,
             label: "القائمة",
             isSelected: selectedIndex == 1,
             onTap: () => onItemTapped(1),
           ),
           NavBarItem(
-            icon: Icons.card_giftcard,
+            icon: Icons.shopping_basket,
             isSelected: selectedIndex == 2,
             isMiddle: true,
             onTap: () => onItemTapped(2),
