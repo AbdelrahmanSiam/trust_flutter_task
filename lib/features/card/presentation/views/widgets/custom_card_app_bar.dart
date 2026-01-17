@@ -19,7 +19,7 @@ class CustomCardAppBar extends StatelessWidget {
         Spacer(),
         Text("تفاصيل المنتج", style: AppStyles.textStyles22),
         Spacer(),
-        CartIcon(cartCount: cartCount,hasBackground: false,),
+        CartIcon(cartCount: cartCount,hasBackground: false,iconColor: Colors.red,),
       ],
     );
   }

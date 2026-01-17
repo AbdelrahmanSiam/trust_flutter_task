@@ -14,7 +14,7 @@ class CustomProductDetailsAppBar extends StatelessWidget {
       children: [
         CustomBackButton(
           onTap: (){
-            (context).pop();
+            context.pop();
           },
         ),
         SizedBox(width: 50,),

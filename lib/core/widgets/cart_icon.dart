@@ -5,11 +5,11 @@ import 'package:trust_flutter_task/core/network/app_router.dart';
 class CartIcon extends StatelessWidget {
   final int cartCount;
   final bool hasBackground;
-
+  final Color iconColor;
   const CartIcon({
     super.key,
     required this.cartCount,
-    this.hasBackground = true,
+    this.hasBackground = true, required this.iconColor,
   });
 
   @override
@@ -30,9 +30,9 @@ class CartIcon extends StatelessWidget {
                     shape: BoxShape.circle,
                   )
                 : null,
-            child: const Icon(
+            child:  Icon(
               Icons.shopping_cart,
-              color: Colors.white,
+              color: iconColor,
               size: 32,
             ),
           ),
@@ -40,7 +40,7 @@ class CartIcon extends StatelessWidget {
           if (cartCount > 0)
             Positioned(
               top: -2,
-              right: -2,
+              left: -2,
               child: Container(
                 width: 18,
                 height: 18,

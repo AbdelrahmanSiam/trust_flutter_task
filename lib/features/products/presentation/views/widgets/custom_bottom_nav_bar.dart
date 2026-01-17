@@ -43,7 +43,7 @@ class CustomBottomNavBar extends StatelessWidget {
             isSelected: selectedIndex == 1,
             onTap: () => onItemTapped(1),
           ),
-          CartIcon(cartCount: cartCount,hasBackground: true,),
+          CartIcon(cartCount: cartCount,hasBackground: true,iconColor: Colors.white,),
           NavBarItem(
             icon: Icons.local_offer,
             label: "العروض",
