@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:trust_flutter_task/core/utils/app_styles.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, this.isSelected = false});
+  const CustomButton({super.key, this.isSelected = false, required this.text});
   final bool isSelected;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class CustomButton extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(top:10.0,right: 10,left: 10),
         child: SizedBox(
-          width: double.infinity,
+          width: double.infinity, 
           height: 50,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
@@ -34,7 +35,7 @@ class CustomButton extends StatelessWidget {
               ),
             ),
             onPressed: (){},
-             child: Text("أضف إلى السلة",style: AppStyles.textStyles22,),),
+             child: Text(text,style: AppStyles.textStyles22,),),
         ),
       ),
     );

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:trust_flutter_task/core/utils/app_styles.dart';
 import 'package:trust_flutter_task/core/utils/assets_data.dart';
 import 'package:trust_flutter_task/features/cart/presentation/views/widgets/custom_card_app_bar.dart';
-import 'package:trust_flutter_task/features/cart/presentation/views/widgets/custom_divider.dart';
+import 'package:trust_flutter_task/core/widgets/custom_divider.dart';
 import 'package:trust_flutter_task/features/cart/presentation/views/widgets/custom_quantity_button.dart';
 import 'package:trust_flutter_task/features/cart/presentation/views/widgets/custom_quantity_selector.dart';
 import 'package:trust_flutter_task/features/cart/presentation/views/widgets/custom_sandwich_list.dart';
@@ -71,8 +71,6 @@ class _CartViewBodyState extends State<CartViewBody> {
                   ),
                   const SizedBox(height: 15),
                   CustomDivider(
-                    color: Colors.grey.shade400,
-                    thickness: 5, 
                   ),
                   const SizedBox(height: 15),
                   LargeText(
@@ -81,22 +79,16 @@ class _CartViewBodyState extends State<CartViewBody> {
                   ),
                   const SizedBox(height: 15),
                   CustomDivider(
-                    color: Colors.grey.shade400,
-                    thickness: 5,
                   ),
                   const SizedBox(height: 15),
                   CustomSandwichList(title: "السندوتش الاول"),
                   const SizedBox(height: 15),
                   CustomDivider(
-                    color: Colors.grey.shade400,
-                    thickness: 5,
                   ),
                   const SizedBox(height: 15),
                   CustomSandwichList(title: "السندوتش الثانى"),
                   const SizedBox(height: 15),
                   CustomDivider(
-                    color: Colors.grey.shade400,
-                    thickness: 5,
                   ),
                   const SizedBox(height: 15),
                   CustomSandwichList(title: "السندوتش الثالث"),

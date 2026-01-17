@@ -9,7 +9,7 @@ class CartView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CartViewBody(),
-      bottomNavigationBar: CustomButton(),
+      bottomNavigationBar: CustomButton(text: "أضف إلى السلة"),
     );
   }
 }

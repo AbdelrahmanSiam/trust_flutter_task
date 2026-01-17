@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class CustomDivider extends StatelessWidget {
   final double height;
   final double thickness;
-  final Color color;
   final double indent;
   final double endIndent;
   final EdgeInsetsGeometry? margin;
@@ -11,8 +10,7 @@ class CustomDivider extends StatelessWidget {
   const CustomDivider({
     Key? key,
     this.height = 1.0,
-    this.thickness = 1.0,
-    this.color = Colors.grey,
+    this.thickness = 5.0,
     this.indent = 0.0,
     this.endIndent = 0.0,
     this.margin,
@@ -26,7 +24,7 @@ class CustomDivider extends StatelessWidget {
       child: Divider(
         height: height,
         thickness: thickness,
-        color: color,
+        color: Color(0XFFD2CDBE),
         indent: indent,
         endIndent: endIndent,
       ),
